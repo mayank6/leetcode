@@ -8,14 +8,12 @@ class Solution(object):
         x=[]
         S=list(S)
         while(f<l):
-                    while not (S[f].isalpha()):
+                    while not (S[f].isalpha()) and f<l:
                         f+=1
-                        if f>l:
-                            break
-                    while not (S[l].isalpha()):
+                        
+                    while not (S[l].isalpha()) and f<l:
                         l-=1
-                        if f>l:
-                            break
+                    
                     if f<l:
                         if S[f].isalpha() and S[l].isalpha():
                             S[f],S[l]=S[l],S[f]
