@@ -22,3 +22,12 @@ class Solution(object):
                 stack.append(node.left)
                 stack.append(node.right)
         return root
+
+#------------------------------------------------------------------#
+class Solution:
+    def invertTree(self, root):
+        if root is None:
+            return None
+        root.left, root.right = \
+            self.invertTree(root.right), self.invertTree(root.left)
+        return root
