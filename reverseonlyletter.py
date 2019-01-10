@@ -1,0 +1,24 @@
+class Solution(object):
+    def reverseOnlyLetters(self, S):
+        """
+        :type S: str
+        :rtype: str
+        """
+        f,l=0,len(S)-1
+        x=[]
+        S=list(S)
+        while(f<l):
+                    while not (S[f].isalpha()):
+                        f+=1
+                        if f>l:
+                            break
+                    while not (S[l].isalpha()):
+                        l-=1
+                        if f>l:
+                            break
+                    if f<l:
+                        if S[f].isalpha() and S[l].isalpha():
+                            S[f],S[l]=S[l],S[f]
+                            f+=1
+                            l-=1
+        return "".join(S)
