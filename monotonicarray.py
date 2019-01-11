@@ -24,3 +24,18 @@ class Solution(object):
         
             
             
+class Solution(object):
+    def isMonotonic(self, A):
+        """
+        :type A: List[int]
+        :rtype: bool
+        """
+        p=True
+        n=True
+        for i in range(len(A)-1):
+            x=A[i]-A[i+1]
+            if x>0:
+                p=False
+            elif x<0:
+                n=False
+        return p or n
