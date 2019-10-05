@@ -40,3 +40,15 @@ class Solution(object):
                     q.append("{}{}".format(element,ch.lower()))
                     q.append("{}{}".format(element,ch.upper()))
         return q
+    
+ #USING INBUILT PYTHON LIBRARY
+# Function to find permutations of a given string 
+from itertools import permutations 
+
+def allPermutations(str): 
+	permList = permutations(str) 
+	for perm in list(permList): 
+		print (''.join(perm)) 
+
+
+
