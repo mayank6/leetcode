@@ -1,2 +1,2 @@
 # leetcode
-*This contains all the code of leetcode easy problems*
+*This contains my solutions of leetcode problems*
